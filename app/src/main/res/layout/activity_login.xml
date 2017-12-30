@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/medium">
+
+        <LinearLayout
+            android:id="@+id/activity_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/appIvLogo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/extraLarge"
+                android:alpha="1"
+                android:src="@drawable/iv_logo" />
+
+            <LinearLayout
+                android:id="@+id/llFormLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/appIvEmail"
+                        android:layout_width="@dimen/iv"
+                        android:layout_height="@dimen/iv"
+                        android:padding="@dimen/small"
+                        android:tint="@color/colorTintIv"
+                        android:src="@drawable/ic_email" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/appEdtEmail"
+                        style="@style/styleEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/appIvEmail"
+                        android:layout_alignTop="@id/appIvEmail"
+                        android:layout_toRightOf="@id/appIvEmail"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:ems="10"
+                        android:hint="@string/hint_email"
+                        android:inputType="textEmailAddress" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/appEdtEmail"
+                        android:background="@color/colorLineNormal" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/large">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/appIvPassword"
+                        android:layout_width="@dimen/iv"
+                        android:layout_height="@dimen/iv"
+                        android:padding="@dimen/small"
+                        android:tint="@color/colorTintIv"
+                        android:src="@drawable/ic_password" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/appEdtPassword"
+                        style="@style/styleEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/appIvPassword"
+                        android:layout_alignTop="@id/appIvPassword"
+                        android:layout_toRightOf="@id/appIvPassword"
+                        android:layout_toLeftOf="@+id/appIvPasswordVisibility"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:ems="10"
+                        android:hint="@string/hint_password"
+                        android:inputType="textPassword" />
+
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/appIvPasswordVisibility"
+                        android:layout_width="@dimen/iv"
+                        android:layout_height="@dimen/iv"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/small"
+                        android:tint="@color/colorTintIv"
+                        android:src="@drawable/ic_visibility"/>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/appEdtPassword"
+                        android:background="@color/colorLineNormal" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rvLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small"
+                android:layout_marginRight="@dimen/small"
+                android:layout_marginTop="@dimen/medium"
+                android:alpha="1">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/appTvLogin"
+                    style="@style/TextSemiBoldSizeRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/huge"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/style_blue_round_button"
+                    android:gravity="center"
+                    android:text="@string/btn_login"
+                    android:textColor="@color/colorButtonNormalText" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/appTvForgotPassword"
+                style="@style/TextSemiBoldSizeRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="@dimen/medium"
+                android:layout_marginTop="@dimen/medium"
+                android:padding="@dimen/small"
+                android:text="@string/forgot_your_password"
+                android:textColor="@color/colorNormalEditText" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSocialLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/medium">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/ivAppFacebookLogin"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/ic_facebook" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/ivAppGoogleLogin"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                app:srcCompat="@drawable/ic_google" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextRegularSizeRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/small"
+                android:text="@string/login_no_account"
+                android:textColor="#cccccc" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/appTvSignUp"
+                style="@style/TextSemiBoldSizeRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/tiny"
+                android:padding="@dimen/small"
+                android:text="@string/sign_up"
+                android:textColor="@color/colorNormalEditText" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+
+

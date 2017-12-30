@@ -1,0 +1,62 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.0-alpha06'
+        classpath "io.realm:realm-gradle-plugin:4.3.1"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext{
+    compileSdkVersion = 27
+    buildToolsVersion = "27.0.2"
+
+    minSdkVersion = 19
+    targetSdkVersion = 27
+
+    constraintLibVersion = "1.0.2"
+    testRunnerLibVersion = "1.0.1"
+    tesEspressoLibVersion = "3.0.1"
+    serviceLibVersion = "11.8.0"
+    supportLibVersion = "27.0.2"
+
+    parcelertLibVersion = "1.1.9"
+    butterknifeLibVersion = "8.8.1"
+
+    retrofitLibVersion = "2.3.0"
+
+    eventbusLibVersion = "3.1.1"
+    gsonLibVersion = "2.8.2"
+    guavaLibVersion = "23.6-android"
+    multidexLibVersion = "1.0.2"
+    sdpLibVersion = "1.0.4"
+    calligraphyLibVersion = "2.3.0"
+
+    rxjavaLibVersion = "2.1.6"
+    rxandroidLibVersion = "2.0.1"
+    okhttp3interceptorLibVersion = "3.9.1"
+
+    glideLibVersion = "4.4.0"
+
+    roomLibVersion = "1.0.0"
+}

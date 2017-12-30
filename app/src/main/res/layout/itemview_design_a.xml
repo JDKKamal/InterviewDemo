@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/appIvTitle"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginBottom="@dimen/small"
+            android:layout_marginTop="@dimen/small"
+            android:padding="@dimen/small"
+            android:scaleType="fitStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/iv_logo" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/appTvTitle"
+            style="@style/TextSemiBoldSizeMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:lines="1"
+            android:text="@string/adp_title"
+            android:textColor="@color/colorItemViewTextNormal"
+            app:layout_constraintLeft_toLeftOf="@+id/appTvDate"
+            app:layout_constraintRight_toLeftOf="@+id/appIvNextIndicator"
+            app:layout_constraintTop_toTopOf="@+id/appIvTitle" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/appTvDate"
+            style="@style/TextLightSizeSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="right"
+            android:text="@string/adp_date_time"
+            android:textColor="@color/colorItemViewTextHint"
+            app:layout_constraintLeft_toRightOf="@+id/appIvTitle"
+            app:layout_constraintRight_toLeftOf="@+id/appIvNextIndicator"
+            app:layout_constraintTop_toBottomOf="@+id/appTvTitle" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/appIvNextIndicator"
+            android:layout_width="@dimen/iv_next_indicator"
+            android:layout_height="@dimen/iv_next_indicator"
+            android:tint="@color/colorTintIndicator"
+            app:layout_constraintBottom_toBottomOf="@+id/appIvTitle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/appIvTitle"
+            app:srcCompat="@drawable/ic_next" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/appTvCount"
+            style="@style/TextLightSizeSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/adp_count"
+            app:layout_constraintBottom_toBottomOf="@+id/appIvTitle"
+            app:layout_constraintLeft_toLeftOf="@+id/appTvTitle" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/appTvHorizontalLine"
+            style="@style/TextLightSizeSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="|"
+            app:layout_constraintLeft_toRightOf="@+id/appTvCount"
+            app:layout_constraintTop_toTopOf="@+id/appTvCount" />
+
+        <TextView
+            android:id="@+id/appTvSuccessfulCount"
+            style="@style/TextLightSizeSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/adp_successful"
+            android:textColor="@color/colorItemViewSuccessfulQuiz"
+            app:layout_constraintLeft_toRightOf="@+id/appTvHorizontalLine"
+            app:layout_constraintRight_toLeftOf="@+id/appIvNextIndicator"
+            app:layout_constraintTop_toTopOf="@+id/appTvHorizontalLine" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

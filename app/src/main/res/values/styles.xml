@@ -1,0 +1,231 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:itemBackground">@color/colorSettingMenu</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="CircularProgressTransparent" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="CheckBoxTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/colorCheckBoxNormal</item>
+        <item name="colorControlActivated">@color/colorCheckBoxActive</item>
+    </style>
+
+    <style name="AlertDialog" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorDialogButtonText</item>
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textAppearance">@style/TextSemiBoldSizeMedium</item>
+    </style>
+
+    <!--Font-->
+    <style name="FontRegular">
+        <item name="fontPath">@string/regular_font</item>
+    </style>
+
+    <style name="FontSemiBold">
+        <item name="fontPath">@string/semi_bold_font</item>
+    </style>
+
+    <style name="FontLight">
+        <item name="fontPath">@string/light_font</item>
+    </style>
+
+    <!--Tiny Text Sizes-->
+    <style name="TextRegularSizeTiny" parent="FontRegular">
+        <item name="android:textSize">@dimen/tiny_text</item>
+    </style>
+
+    <style name="TextSemiBoldSizeTiny" parent="FontSemiBold">
+        <item name="android:textSize">@dimen/tiny_text</item>
+    </style>
+
+    <style name="TextLightSizeTiny" parent="FontLight">
+        <item name="android:textSize">@dimen/tiny_text</item>
+    </style>
+
+    <!--Small Text Sizes-->
+    <style name="TextRegularSizeSmall" parent="FontRegular">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="TextLightSizeSmall" parent="FontLight">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="TextSemiBoldSizeSmall" parent="FontSemiBold">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <!--Medium Text Sizes-->
+    <style name="TextRegularSizeMedium" parent="FontRegular">
+        <item name="android:textSize">@dimen/medium_text</item>
+    </style>
+
+    <style name="TextLightSizeMedium" parent="FontLight">
+        <item name="android:textSize">@dimen/medium_text</item>
+    </style>
+
+    <style name="TextSemiBoldSizeMedium" parent="FontSemiBold">
+        <item name="android:textSize">@dimen/medium_text</item>
+    </style>
+
+    <!--Regular Text Sizes-->
+    <style name="TextRegularSizeRegular" parent="FontRegular">
+        <item name="android:textSize">@dimen/regular_text</item>
+    </style>
+
+    <style name="TextLightSizeRegular" parent="FontLight">
+        <item name="android:textSize">@dimen/regular_text</item>
+    </style>
+
+    <style name="TextSemiBoldSizeRegular" parent="FontSemiBold">
+        <item name="android:textSize">@dimen/regular_text</item>
+    </style>
+
+    <!--Large Text Sizes-->
+    <style name="TextLargeSizeRegular" parent="FontRegular">
+        <item name="android:textSize">@dimen/medium</item>
+    </style>
+
+    <style name="TextLargeLightSizeRegular" parent="FontLight">
+        <item name="android:textSize">@dimen/medium</item>
+    </style>
+
+    <style name="TextSemiBoldSizeLarge" parent="FontSemiBold">
+        <item name="android:textSize">@dimen/medium</item>
+    </style>
+
+    <!--Extra Large Text Sizes-->
+    <style name="TextExtraLargeSizeRegular" parent="FontRegular">
+        <item name="android:textSize">@dimen/extraLarge</item>
+    </style>
+
+    <style name="TextExtraLargeLightSizeRegular" parent="FontLight">
+        <item name="android:textSize">@dimen/extraLarge</item>
+    </style>
+
+    <style name="TextSemiBoldSizeExtraLarge" parent="FontSemiBold">
+        <item name="android:textSize">@dimen/extraLarge</item>
+    </style>
+
+    <style name="TextSemiBoldSizeModule" parent="FontLight">
+        <item name="android:textSize">@dimen/large_medium_text</item>
+    </style>
+
+    <style name="styleEditText" parent="TextLargeSizeRegular">
+        <item name="android:background">@drawable/style_app_edittext</item>
+        <item name="android:textColorHint">@color/colorHintEditText</item>
+        <item name="android:textColor">@color/colorNormalEditText</item>
+    </style>
+
+    <style name="styleEditTextSearch" parent="TextLargeSizeRegular">
+        <item name="android:textColorHint">@color/colorHintSearch</item>
+        <item name="android:textColor">@color/colorNormalSearch</item>
+    </style>
+
+    <style name="styleSelectTextView" parent="TextRegularSizeRegular">
+        <item name="android:background">@drawable/style_app_edittext</item>
+        <item name="android:textColor">@color/colorHintEditText</item>
+        <item name="android:paddingTop">@dimen/regularSmall</item>
+        <item name="android:paddingBottom">@dimen/regularSmall</item>
+    </style>
+
+    <style name="BlueButtonTheme" parent="TextSemiBoldSizeMedium">
+        <item name="android:background">@drawable/style_blue_round_button</item>
+        <item name="android:layout_marginLeft">@dimen/_10sdp</item>
+        <item name="android:layout_marginRight">@dimen/_10sdp</item>
+        <item name="android:layout_marginTop">@dimen/_5sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_5sdp</item>
+        <item name="android:padding">@dimen/_7sdp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="ButtonTheme" parent="TextSemiBoldSizeMedium">
+        <item name="android:background">@drawable/style_blue_round_button</item>
+        <item name="android:padding">@dimen/_7sdp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="ButtonOTPVerifyEnableTheme" parent="TextSemiBoldSizeMedium">
+        <item name="android:background">@drawable/style_app_otp_verify_enable</item>
+        <item name="android:padding">@dimen/_7sdp</item>
+        <item name="android:textColor">@color/colorVerifyEnable</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="ButtonOTPVerifyDisableTheme" parent="TextSemiBoldSizeMedium">
+        <item name="android:background">@drawable/style_app_otp_verify_disable</item>
+        <item name="android:padding">@dimen/_7sdp</item>
+        <item name="android:textColor">@color/colorVerifyDisable</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="ButtonOTPResendEnableTheme" parent="TextSemiBoldSizeMedium">
+        <item name="android:background">@drawable/style_app_otp_resend_enable</item>
+        <item name="android:padding">@dimen/_7sdp</item>
+        <item name="android:textColor">@color/colorOTPResendEnable</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="ButtonOTPResendDisableTheme" parent="TextSemiBoldSizeMedium">
+        <item name="android:background">@drawable/style_app_otp_resend_disable</item>
+        <item name="android:padding">@dimen/_7sdp</item>
+        <item name="android:textColor">@color/colorOTPResendDisable</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="ButtonBluedTheme" parent="TextSemiBoldSizeMedium">
+        <item name="android:background">@drawable/style_app_button_blue</item>
+        <item name="android:padding">@dimen/small</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="RatingBarTheme" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorRattingNormal</item>
+        <item name="colorControlActivated">@color/colorRattingActive</item>
+    </style>
+
+    <style name="styleTextViewMedium" parent="TextRegularSizeMedium">
+        <item name="android:textColor">@color/colorNormalEditText</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="CustomFloaterTextAppearance" parent="android:TextAppearance.Small">
+        <item name="android:textSize">9sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:shadowColor">#FFFF0000</item>
+        <item name="android:shadowRadius">4</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">3</item>
+    </style>
+
+    <style name="styleBottomTab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/_20sdp</item>
+        <item name="android:paddingRight">@dimen/_20sdp</item>
+        <item name="android:paddingTop">@dimen/medium</item>
+        <item name="android:paddingBottom">@dimen/regular</item>
+    </style>
+
+    <style name="TabLayoutStyle" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+</resources>

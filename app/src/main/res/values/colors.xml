@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#303F9F</color>
+
+    <color name="colorBackground">#3F51B5</color>
+    <color name="colorBackgroundWhite">#FFFFFF</color>
+    <color name="colorBackgroundOTP">#Afff</color>
+
+    <color name="colorDialogButtonText">#FFCA28</color>
+
+    <color name="colorTotal">#828282</color>
+    <color name="colorEmailContact">#F9F9F9</color>
+
+    <!-- DIVIDER -->
+    <color name="colorDividerGrey">#828282</color>
+
+    <!-- DRAWER -->
+    <color name="colorDrawerTextTint">#212121</color>
+    <color name="colorDrawerIconTint">#757575</color>
+    <color name="colorDrawerSelectedIconTint">#303F9F</color>
+    <color name="colorSelectedTextTint">#303F9F</color>
+
+    <color name="colorItemViewTextNormal">#222</color>
+    <color name="colorItemViewTextHint">#888</color>
+    <color name="colorItemViewSuccessfulQuiz">#1BAF3B</color>
+    <color name="colorItemViewByNotification">#303F9F</color>
+
+    <color name="colorCount">#FFCA28</color>
+    <color name="colorCountLabel">#Afff</color>
+
+    <color name="colorLine">#C0C0C0</color>
+    <color name="colorLineWhite">#FFFFFF</color>
+    <color name="colorTintIv">#66939393</color>
+    <color name="colorTintIndicator">#D3D7D9</color>
+    <color name="colorTintHideIv">#888</color>
+
+    <color name="colorDeliveryCharge">#D8A019</color>
+    <color name="colorLink">#1986EF</color>
+
+    <color name="colorFloatingButton">#3F51B5</color>
+
+    <color name="colorTabBg">#3F51B5</color>
+    <color name="colorTabIndicatorColor">#FFCA28</color>
+    <color name="colorTabSelectedText">#FFFFFF</color>
+    <color name="colorTabText">#Afff</color>
+
+    <!-- RATTING -->
+    <color name="colorRattingActive">#3F51B5</color>
+    <color name="colorRattingNormal">#414141</color>
+
+    <!-- DRAG & DROP -->
+    <color name="colorDragSelect">#Afff</color>
+    <color name="colorDropSelect">#FFFFFF</color>
+
+    <color name="colorFloatingBackground">#3F51B5</color>
+    <color name="colorCalendarSelectBackground">#FFCA28</color>
+
+    <color name="colorOTPResendEnable">#3F51B5</color>
+    <color name="colorOTPResendDisable">#F85C5D</color>
+    <color name="colorVerifyEnable">#1BAF3B</color>
+    <color name="colorVerifyDisable">#F85C5D</color>
+
+    <color name="colorCredit">#1BAF3B</color>
+    <color name="colorDebit">#F85C5D</color>
+    <color name="colorTransaction">#FFCA28</color>
+
+    <color name="color_login_button">#303F9F</color>
+    <color name="color_login_button_press">#303F9F</color>
+
+    <color name="color_signup_button">#F2F2F2</color>
+    <color name="color_signup_buttonpress">#EBEBEB</color>
+    <color name="color_primary_men">#00ACC1</color>
+    <color name="color_product_bottom">#ffffff</color>
+    <color name="color_edittext_hint">#999</color>
+
+    <color name="color_edittext_label">#fff</color>
+
+    <color name="separatorColor">#18102C</color>
+
+    <color name="colorHintEditText">#FFFFFF</color>
+    <color name="colorNormalEditText">#FFFFFF</color>
+    <color name="colorLineNormal">#EBEBEB</color>
+    <color name="colorBorderEditText">#414141</color>
+
+    <color name="colorHintSearch">#999</color>
+    <color name="colorNormalSearch">#414141</color>
+
+    <color name="colorButtonNormalText">#FFFFFF</color>
+    <color name="colorButtonLink">#414141</color>
+
+    <color name="colorSettingMenu">#3F51B5</color>
+    <color name="colorFloating">#3F51B5</color>
+    <color name="colorCardViewBackground">#FFFFFF</color>
+
+    <color name="colorCheckBoxActive">#1BAF3B</color>
+    <color name="colorCheckBoxNormal">#414141</color>
+    <color name="colorCheckBoxTextActive">#1BAF3B</color>
+    <color name="colorCheckBoxTextNormal">#414141</color>
+    <color name="colorCheckBoxTextRed">#F85C5D</color>
+
+    <color name="colorTransparent">#00000000</color>
+
+    <color name="colorTabBackground">#FFFFFF</color>
+    <color name="colorTabTextNormal">#3F51B5</color>
+    <color name="colorTabTextSelect">#3F51B5</color>
+    <color name="colorTabIndicator">#3F51B5</color>
+    <color name="colorTabLine">#3F51B5</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorRed">#F85C5D</color>
+
+    <!-- DiscreteSeekBar -->
+    <color name="dsb_progress_color">#ff009688</color>
+    <color name="dsb_track_color">#ff939393</color>
+    <color name="dsb_disabled_color">#66939393</color>
+    <color name="dsb_ripple_color_pressed">#77939393</color>
+    <color name="dsb_ripple_color_focused">#99999999</color>
+
+    <color name="redSelector">#F85C5D</color>
+    <color name="yellow">#FFCA28</color>
+
+    <color name="whiteSelector">#Afff</color>
+    <color name="lightGray">#9dc9f1</color>
+
+    <color name="grey">#828282</color>
+    <color name="lightBlue">#e8f3fd</color>
+    <color name="titleBlue">#1986ef</color>
+    <color name="StrikeText">#737373</color>
+    <color name="cardViewGrayText">#414141</color>
+    <color name="whiteGray">#eee</color>
+    <color name="darkBlue">#0066b2</color>
+
+    <color name="orderBlue">#1986EF</color>
+    <color name="orderYellow">#EFEF4C</color>
+    <color name="orderRed">#ef4c4c</color>
+
+    <color name="colorCongratulation">#1BAF3B</color>
+    <color name="colorSolution">#FFCA28</color>
+    <color name="colorAnsStatus">#0066b2</color>
+
+    <color name="colorTransparent10">#66939393</color>
+
+
+    <color name="grey_50">#fafafa</color>
+    <color name="grey_100">#f5f5f5</color>
+    <color name="grey_200">#eeeeee</color>
+    <color name="grey_300">#e0e0e0</color>
+    <color name="grey_400">#bdbdbd</color>
+    <color name="grey_500">#9e9e9e</color>
+    <color name="grey_600">#757575</color>
+    <color name="grey_700">#616161</color>
+    <color name="grey_800">#424242</color>
+    <color name="grey_900">#212121</color>
+    <color name="grey_black_1000">#000000</color>
+    <color name="grey_white_1000">#ffffff</color>
+</resources>

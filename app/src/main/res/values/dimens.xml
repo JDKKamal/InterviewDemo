@@ -1,0 +1,63 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="login_button_radius">10dp</dimen>
+
+    <dimen name="iv">@dimen/_35sdp</dimen>
+    <dimen name="iv_next_indicator">@dimen/_30sdp</dimen>
+    <dimen name="iv_search">@dimen/_7sdp</dimen>
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="dots_margin_bottom">10dp</dimen>
+    <dimen name="dimen_100">@dimen/_100sdp</dimen>
+    <dimen name="iv_vp_image">@dimen/_200sdp</dimen>
+    <dimen name="btn_height">@dimen/_40sdp</dimen>
+
+    <dimen name="drawer_iv">@dimen/_30sdp</dimen>
+    <dimen name="drawer_margin_left">@dimen/_24sdp</dimen>
+
+    //Margin and Padding
+    <dimen name="extraTinyLine">0.7dp</dimen>
+    <dimen name="extraTiny">@dimen/_1sdp</dimen>
+    <dimen name="tiny">@dimen/_3sdp</dimen>
+    <dimen name="small">@dimen/_5sdp</dimen>
+    <dimen name="regularSmall">@dimen/_10sdp</dimen>
+    <dimen name="regular">@dimen/_12sdp</dimen>
+    <dimen name="medium">@dimen/_15sdp</dimen>
+    <dimen name="large">@dimen/_17sdp</dimen>
+    <dimen name="extraLarge">@dimen/_25sdp</dimen>
+    <dimen name="hugeSmall">@dimen/_30sdp</dimen>
+    <dimen name="huge">@dimen/_35sdp</dimen>
+    <dimen name="big">@dimen/_45sdp</dimen>
+    <dimen name="bigLarge">@dimen/_55sdp</dimen>
+    <dimen name="sdp_145">@dimen/_145sdp</dimen>
+    <dimen name="status_bar_height">0dp</dimen>
+
+    //Text Sizes
+    <!--<dimen name="tiny_text">8sp</dimen>-->
+    <!--<dimen name="tiny_small_text">10sp</dimen>-->
+    <!--<dimen name="small_text">12sp</dimen>-->
+    <!--<dimen name="regular_text">14sp</dimen>-->
+    <!--<dimen name="medium_text">16sp</dimen>-->
+    <!--<dimen name="large_text">20sp</dimen>-->
+    <!--<dimen name="large_medium_text">26sp</dimen>-->
+    <!--<dimen name="extraLarge_text">36sp</dimen>-->
+
+    <dimen name="xxtiny_text">@dimen/_6sdp</dimen>
+    <dimen name="xtiny_text">@dimen/_8sdp</dimen>
+    <dimen name="tiny_text">@dimen/_9sdp</dimen>
+    <dimen name="small_text">@dimen/_11sdp</dimen>
+    <dimen name="medium_text">@dimen/_12sdp</dimen>
+    <dimen name="regular_text">@dimen/_13sdp</dimen>
+
+    <dimen name="large_text">@dimen/_17sdp</dimen>
+    <dimen name="large_medium_text">@dimen/_19sdp</dimen>
+    <dimen name="extraLarge_text">@dimen/_21sdp</dimen>
+    <dimen name="big_text">@dimen/_23sdp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+
+    <integer name="animation_duration">300</integer>
+</resources>
