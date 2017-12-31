@@ -17,8 +17,8 @@ import butterknife.BindView;
 
 public class MultipleSelectActivity extends BaseActivity {
 
-    @BindView(R.id.rvFilter)
-    RecyclerView rvFilter;
+    @BindView(R.id.recyclerView)
+    RecyclerView recyclerView;
 
     private MultipleSelectAdapter adapter;
 
@@ -29,7 +29,7 @@ public class MultipleSelectActivity extends BaseActivity {
 
         bindViews();
 
-        rvFilter.setLayoutManager(new LinearLayoutManager(this));
+        setRecyclerView(recyclerView, 0, recyclerViewLinearLayout);
 
         adapter = new MultipleSelectAdapter(this, getList(), new MultipleSelectAdapter.OnCheckedChange(){
             @Override
@@ -37,7 +37,7 @@ public class MultipleSelectActivity extends BaseActivity {
                 AppUtils.logD(getToJsonClass(listMultipleSelect));
             }
         });
-        rvFilter.setAdapter(adapter);
+        recyclerView.setAdapter(adapter);
     }
 
     public List<ModelMultipleSelect> getList() {

@@ -16,7 +16,7 @@ import io.realm.RealmResults;
  * Created by lakhani on 9/26/2017.
  */
 
-public class DBQuery {
+public class  DBQuery {
 
     private static DBQuery instance;
     private final Realm realm;

@@ -1,6 +1,7 @@
 package com.jdkgroup.interviewdemo.adapter;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,34 +10,40 @@ import android.widget.Filter;
 import android.widget.Filterable;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import com.jdkgroup.customviews.recyclerview.BaseRecyclerView;
+import com.jdkgroup.customviews.recyclerview.BaseViewHolder;
 import com.jdkgroup.interviewdemo.R;
+import com.jdkgroup.model.ModelMultipleSelect;
 
-public class FilterAdapter extends RecyclerView.Adapter<FilterAdapter.Holder> implements Filterable {
+import butterknife.BindView;
 
-    private Context context;
-    private ArrayList<String> listDeveloper, filterList;
+public class FilterAdapter  extends BaseRecyclerView<ModelMultipleSelect> implements Filterable {
+
+    private LayoutInflater inflater;
+    private List<ModelMultipleSelect> profiles, filterList;
     private CustomFilter filter;
 
-    public FilterAdapter(Context context, ArrayList<String> listDeveloper) {
-        this.context = context;
-        this.listDeveloper = listDeveloper;
-        this.filterList = listDeveloper;
+    public FilterAdapter(Context context, ArrayList<ModelMultipleSelect> profiles) {
+        this.inflater = LayoutInflater.from(context);
+        this.profiles = profiles;
+        this.filterList = profiles;
     }
 
     @Override
-    public Holder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.itemview_design_a, null);
-        return new Holder(view);
+    protected ModelMultipleSelect getItem(int position) {
+        return profiles.get(position);
     }
 
     @Override
-    public void onBindViewHolder(Holder holder, int position) {
+    public BaseViewHolder<ModelMultipleSelect> onCreateViewHolder(ViewGroup parent, int viewType) {
+        return new ProfileViewHolder(inflater.inflate(R.layout.itemview_design_a, parent, false));
     }
 
     @Override
     public int getItemCount() {
-        return listDeveloper.size();
+        return profiles.size();
     }
 
     @Override
@@ -47,17 +54,24 @@ public class FilterAdapter extends RecyclerView.Adapter<FilterAdapter.Holder> im
         return filter;
     }
 
-    public class Holder extends RecyclerView.ViewHolder {
+    class ProfileViewHolder extends BaseViewHolder<ModelMultipleSelect> {
+        @BindView(R.id.appTvTitle)
+        AppCompatTextView appTvTitle;
 
-        public Holder(View itemView) {
+        public ProfileViewHolder(View itemView) {
             super(itemView);
+        }
+
+        @Override
+        public void populateItem(ModelMultipleSelect profile) {
+            appTvTitle.setText(profile.getCategoryName() + "");
         }
     }
 
     public class CustomFilter extends Filter {
-        ArrayList<String> filterList;
+        List<ModelMultipleSelect> filterList;
 
-        public CustomFilter(ArrayList<String> filterList) {
+        public CustomFilter(List<ModelMultipleSelect> filterList) {
             this.filterList = filterList;
         }
 
@@ -69,10 +83,10 @@ public class FilterAdapter extends RecyclerView.Adapter<FilterAdapter.Holder> im
             if (str != null && str.length() > 0) {
                 str = str.toString().toUpperCase();
 
-                ArrayList<String> filteredPlayers = new ArrayList<>();
+                ArrayList<ModelMultipleSelect> filteredPlayers = new ArrayList<>();
 
                 for (int i = 0; i < filterList.size(); i++) {
-                    if (filterList.get(i).toUpperCase().contains(str)) {
+                    if (filterList.get(i).getCategoryName().toUpperCase().contains(str)) {
                         filteredPlayers.add(filterList.get(i));
                     }
                 }
@@ -87,7 +101,7 @@ public class FilterAdapter extends RecyclerView.Adapter<FilterAdapter.Holder> im
 
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
-            listDeveloper = (ArrayList<String>) results.values;
+            profiles = (ArrayList<ModelMultipleSelect>) results.values;
             notifyDataSetChanged();
         }
     }
