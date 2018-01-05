@@ -32,9 +32,9 @@ public class FilterActivity extends BaseActivity implements AppEditTextChangedLi
 
         bindViews();
 
-        filterAdapter = new FilterAdapter(getActivity(), getList());
         setRecyclerView(recyclerView, 0, recyclerViewLinearLayout);
 
+        filterAdapter = new FilterAdapter(getActivity(), getList());
         recyclerView.setAdapter(filterAdapter);
 
         appEditFilter.addTextChangedListener(new AppEditTextChangedListener(this, appEditFilter));

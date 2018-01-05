@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jdkgroup.interviewdemo.view.ContactView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageView_photo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/imageView_photo"
+        android:layout_toRightOf="@+id/imageView_photo"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textView_displayName"
+            style="@style/TextSemiBoldSizeMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Name" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textView_phoneNumber"
+            style="@style/TextLightSizeMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Phone No." />
+
+    </LinearLayout>
+
+</com.jdkgroup.interviewdemo.view.ContactView>

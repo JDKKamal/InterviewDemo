@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/small"
+    android:focusableInTouchMode="true">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/remove"
+        android:padding="@dimen/small"/>
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:padding="@dimen/small">
+
+            <LinearLayout
+                android:layout_width="@dimen/_65sdp"
+                android:layout_height="@dimen/_65sdp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:padding="1dp">
+
+                <ImageView
+                    android:id="@+id/ivProductImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/small"
+                    android:src="@drawable/iv_logo" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/appTvProductName"
+                style="@style/TextSemiBoldSizeSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/tiny"
+                android:text="Hello world"
+                android:textColor="@color/titleBlue"
+                android:textSize="13sp"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    style="@style/TextRegularSizeTiny"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="@dimen/tiny"
+                    android:text="CAS no:"
+                    android:textColor="@color/cardViewGrayText" />
+
+                <TextView
+                    android:id="@+id/tvCAS_NO"
+                    style="@style/TextRegularSizeTiny"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="@dimen/tiny"
+                    android:text="507-70-0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    style="@style/TextRegularSizeTiny"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="@dimen/tiny"
+                    android:text="Quantity"
+                    android:textColor="@color/cardViewGrayText" />
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tvQty"-->
+                    <!--style="@style/TextRegularSizeTiny"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:padding="@dimen/tiny"-->
+                    <!--android:text="6"-->
+                    <!--android:textColor="@color/black" />-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/ivMinusQty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/min"
+                        android:padding="@dimen/tiny"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvQty"
+                        style="@style/TextRegularSizeSmall"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/tiny"
+                        android:text="0"
+                        android:textAlignment="center" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/ivPlusQty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/add"
+                        android:padding="@dimen/tiny"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPrice"
+                style="@style/TextRegularSizeSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/tiny"
+                android:text="₹50"
+                android:textColor="@color/titleBlue" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/tiny"
+        android:background="@color/colorPrimary" />
+</RelativeLayout>

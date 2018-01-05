@@ -34,7 +34,7 @@ public class BaseAdapter extends BaseRecyclerView<ModelMultipleSelect> {
 
     @Override
     public BaseViewHolder<ModelMultipleSelect> onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ProfileViewHolder(inflater.inflate(R.layout.itemview_design_a, parent, false));
+        return new ViewHolder(inflater.inflate(R.layout.itemview_design_a, parent, false));
     }
 
     @Override
@@ -42,11 +42,11 @@ public class BaseAdapter extends BaseRecyclerView<ModelMultipleSelect> {
         return profiles.size();
     }
 
-    class ProfileViewHolder extends BaseViewHolder<ModelMultipleSelect> {
+    class ViewHolder extends BaseViewHolder<ModelMultipleSelect> {
         @BindView(R.id.appTvTitle)
         AppCompatTextView appTvTitle;
 
-        public ProfileViewHolder(View itemView) {
+        public ViewHolder(View itemView) {
             super(itemView);
 
         }

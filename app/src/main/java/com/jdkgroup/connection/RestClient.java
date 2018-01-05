@@ -23,6 +23,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RestClient implements RestConstant {
 
     private static RestClient instance = null;
+    private Context context;
 
     private RestService restService;
 
@@ -38,6 +39,7 @@ public class RestClient implements RestConstant {
     }
 
     public RestClient(Context context, int request) {
+        this.context = context;
         Retrofit retrofit;
         if (request == REQUEST_AUTH) {
             retrofit = new Retrofit.Builder().baseUrl(BASE_URL)
@@ -70,6 +72,9 @@ public class RestClient implements RestConstant {
             .writeTimeout(30, TimeUnit.SECONDS)
             .addInterceptor(logging).build();
 
+    TokenManager tokenManager = new TokenManagerImpl(context);
+
+
     OkHttpClient httpClientAuth = new OkHttpClient.Builder()
             .connectTimeout(30, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
@@ -78,7 +83,7 @@ public class RestClient implements RestConstant {
             .cache(cache)
             .addInterceptor(chain -> {
                 Request original = chain.request();
-                Request.Builder requestBuilder = original.newBuilder().header("Authorization", "bearer ac65df43b1a76c8672f3f4da2c282f822a7bf39c40b47de7af930dc21110f0f4");
+                Request.Builder requestBuilder = original.newBuilder().header("Authorization", tokenManager.getToken());
                 requestBuilder.header("Accept", "application/json");
                 requestBuilder.method(original.method(), original.body());
                 Request request = requestBuilder.build();

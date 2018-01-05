@@ -33,17 +33,15 @@ public interface AppConstant {
     public int PARCELABLE_CHANGE_PASSWORD = 1_6;
 
     //LAUNCH ACTIVITY OR FRAGMENT
-    public int LAUNCH_PROFILE = 1;
-
-    public int LAUNCH_CATEGORY_FRAGMENT = 7;
-    public int LAUNCH_CATEGORY_LIST_FRAGMENT = 7_1;
-    public int LAUNCH_QUESTION_FRAGMENT = 7_2;
-    public int LAUNCH_COMPLETE_FRAGMENT = 7_3;
-    public int LAUNCH_CHANGE_PASSWORD_FRAGMENT = 1_1;
+    public int LAUNCH_HOME_FRAGMENT = 1;
+    public int LAUNCH_PROFILE_FRAGMENT = 2;
+    public int LAUNCH_CONTACT_FRAGMENT = 3;
 
     /* BASIC */
+    public final String SP_IS_LOGIN = "is_login";
     public final String SP_DEVICE_TOKEN = "device_token";
     public final String SP_AUTH_TOKEN = "auth_token";
+    public final String SP_FCM_TOKEN = "fcm_token";
     public final String SP_USERNAME = "name";
     public final String SP_EMAIL = "email";
     public final String SP_MOBILE = "mobile";

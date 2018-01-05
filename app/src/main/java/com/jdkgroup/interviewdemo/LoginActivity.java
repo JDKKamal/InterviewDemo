@@ -18,6 +18,7 @@ import com.jdkgroup.customviews.socialintegration.facebookintegration.FacebookLo
 import com.jdkgroup.customviews.socialintegration.googleintegration.GoogleLoginHelper;
 import com.jdkgroup.customviews.socialintegration.googleintegration.GoogleLoginListener;
 import com.jdkgroup.customviews.socialintegration.googleintegration.GoogleLoginModel;
+import com.jdkgroup.interacter.AppInteractor;
 import com.jdkgroup.presenter.LoginPresenter;
 import com.jdkgroup.utils.AppUtils;
 import com.jdkgroup.utils.PreferenceUtils;
@@ -100,10 +101,9 @@ public class LoginActivity extends SimpleMVPActivity<LoginPresenter, LoginView> 
         ButterKnife.bind(this);
         gson = new Gson();
 
-        /* TODO FACEBOOK HASHKEY
-        AppInteractor appInteractor = new AppInteractor();
-        appInteractor.FacebookHashKey(this, "com.jdkgroup.pocketquiz");
-        */
+        // TODO FACEBOOK HASHKEY
+        /*AppInteractor appInteractor = new AppInteractor();
+        appInteractor.getFacebookHashKey(this, "com.jdkgroup.pocketquiz");*/
 
         facebookLoginHelper = new FacebookLoginHelper(this);
         googleLoginHelper = new GoogleLoginHelper(this, LoginActivity.this, getString(R.string.google_client_id)); //TODO GOOGLE-SERVICE.JSON CLIENT_ID LAST HERE SET

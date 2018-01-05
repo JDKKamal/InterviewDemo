@@ -4,13 +4,11 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.jdkgroup.constant.AppConstant;
-import com.jdkgroup.constant.RestConstant;
 
 import static android.content.Context.MODE_PRIVATE;
 
 public class PreferenceUtils implements AppConstant{
-    private final static String SP_NAME = "pocket_quiz";
-    private final static String IS_LOGIN = "islogin";
+    private final static String SP_NAME = "interview";
     private static PreferenceUtils preferenceUtils;
     private SharedPreferences sharedPreferences;
     private Context mContext;
@@ -36,11 +34,11 @@ public class PreferenceUtils implements AppConstant{
     }
 
     public boolean isLogin() {
-        return sharedPreferences.getBoolean(IS_LOGIN, false);
+        return sharedPreferences.getBoolean(SP_IS_LOGIN, false);
     }
 
     public void setIsLogin(boolean islogin) {
-        sharedPreferences.edit().putBoolean(IS_LOGIN, islogin).apply();
+        sharedPreferences.edit().putBoolean(SP_IS_LOGIN, islogin).apply();
     }
 
     public String getDeviceToken() {
@@ -177,5 +175,13 @@ public class PreferenceUtils implements AppConstant{
 
     public void setAppLoad(int password) {
         sharedPreferences.edit().putInt(SP_APP_LOAD, password).apply();
+    }
+
+    public String getFCMToken() {
+        return sharedPreferences.getString(SP_FCM_TOKEN, "");
+    }
+
+    public void setFCMToken(String fcmToken) {
+        sharedPreferences.edit().putString(SP_FCM_TOKEN, fcmToken).apply();
     }
 }

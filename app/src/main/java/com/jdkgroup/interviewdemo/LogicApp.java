@@ -32,5 +32,18 @@ public class LogicApp
         });
     }*/
 
+   /*TODO VIEWPAGER USING TAB
+   viewPager.setOffscreenPageLimit(1);
 
+    @Override
+    public void setMenuVisibility(final boolean visible) {
+        super.setMenuVisibility(visible);
+        if (visible) {
+           //execute your data loading logic.
+        }
+    }*/
+
+    /*
+    FragNav (Tab backspace manage)
+    */
 }

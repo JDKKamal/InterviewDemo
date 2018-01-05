@@ -1,5 +1,8 @@
 package com.jdkgroup.utils;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -18,7 +21,6 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.AppCompatEditText;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
@@ -29,14 +31,10 @@ import android.util.TypedValue;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.FieldNamingPolicy;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.jdkgroup.customviews.gson.ListOfJson;
+import com.jdkgroup.interviewdemo.DrawerActivity;
 
 import org.json.JSONObject;
 
@@ -62,7 +60,10 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.TimeZone;
-import java.util.regex.Matcher;
+
+import com.jdkgroup.interviewdemo.R;
+import com.jdkgroup.interviewdemo.fragment.ContactFragment;
+import com.jdkgroup.interviewdemo.fragment.ProfileFragment;
 
 public class AppUtils {
     private static String TAG = "Tag";
@@ -70,6 +71,9 @@ public class AppUtils {
 
     private static JSONObject jsonobject;
     private static Iterator iterator;
+
+    private static FragmentManager fragmentManager;
+    private static FragmentTransaction fragmentTransaction;
 
     public static void showToast(Context context, String message) {
         Toast toast = Toast.makeText(context, message + "", Toast.LENGTH_SHORT);
@@ -105,7 +109,6 @@ public class AppUtils {
     public static void loge(String text) {
         Log.e(TAG, text);
     }
-
 
     private static String convertToHex(byte[] data) {
         StringBuilder buf = new StringBuilder();
@@ -218,16 +221,14 @@ public class AppUtils {
         }
     }
 
-    public static String getDateFromTime(long mTimestamp, String mDateFormate) {
-        String date;
-        SimpleDateFormat dateFormatter = new SimpleDateFormat(mDateFormate);
+    public static String getDateFromTime(long mTimestamp, String mDateFormat) {
+        SimpleDateFormat dateFormatter = new SimpleDateFormat(mDateFormat);
         dateFormatter.setTimeZone(TimeZone.getDefault());
 
         Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
         cal.setTimeInMillis(mTimestamp);
 
-        date = dateFormatter.format(cal.getTime());
-        return date;
+        return dateFormatter.format(cal.getTime());
     }
 
     public static String getDateString(long miliis, String mDateFormate) {
@@ -433,31 +434,41 @@ public class AppUtils {
         return hex.toString();
     }
 
-   /* public static void replaceFragment(Activity activity, Fragment fragment, Bundle bundle) {
-        String backStateName = fragment.getClass().getName();
-        String fragmentTag = backStateName;
-        FragmentManager fragmentManager = ((DrawerActivity) activity).getSupportFragmentManager();
+    public static void replaceFragment(Activity activity, Fragment fragment, Bundle bundle) {
+        String backStateName = fragment.getClass().getSimpleName();
+        fragmentManager = ((DrawerActivity) activity).getSupportFragmentManager();
 
         boolean fragmentPopped = fragmentManager.popBackStackImmediate(backStateName, 0);
-        if (!fragmentPopped && fragmentManager.findFragmentByTag(fragmentTag) == null) {
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        if (!fragmentPopped && fragmentManager.findFragmentByTag(backStateName) == null) {
             if (bundle != null) {
                 fragment.setArguments(bundle);
             }
-            fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-            fragmentTransaction.replace(R.id.container, fragment, backStateName);
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.frameLayout, fragment);
             fragmentTransaction.addToBackStack(backStateName);
             fragmentTransaction.commit();
         }
-    }*/
+    }
 
     /*
      *  replaceFragment(activity, new FragmentName(), bundle); //When pass the data then set param bundle
      */
     public static void launchFragmentActivity(final Activity activity, final int redirect, final Bundle bundle) {
         switch (redirect) {
-            case 6: //LOGOUT
+            case 0:
 
+                break;
+
+            case 1:
+
+                break;
+
+            case 2:
+                replaceFragment(activity, new ProfileFragment(), null);
+                break;
+
+            case 3:
+                replaceFragment(activity, new ContactFragment(), null);
                 break;
 
             default:
@@ -498,9 +509,8 @@ public class AppUtils {
         return last;
     }
 
-    public static void listIterator(List<String> list)
-    {
-        for (Iterator<String> iterator = list.iterator(); iterator.hasNext();) {
+    public static void listIterator(List<String> list) {
+        for (Iterator<String> iterator = list.iterator(); iterator.hasNext(); ) {
             String str = iterator.next();
         }
     }
