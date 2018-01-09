@@ -50,9 +50,11 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.jdkgroup.constant.AppConstant;
+import com.jdkgroup.interacter.AppInteractor;
 import com.jdkgroup.interacter.disposablemanager.DisposableManager;
 import com.jdkgroup.interviewdemo.R;
 import com.jdkgroup.utils.AppUtils;
+import com.jdkgroup.utils.Validator;
 
 import org.json.JSONObject;
 import org.parceler.Parcels;
@@ -73,8 +75,9 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
+    protected Validator validator;
     private Unbinder unbinder;
 
     public ProgressBar progressToolbar;
@@ -686,5 +689,11 @@ public class BaseActivity extends AppCompatActivity {
             return "0";
         }
     }
-}
 
+    protected final Validator objValidator() {
+        if (validator == null) {
+            validator = new Validator();
+        }
+        return validator;
+    }
+}

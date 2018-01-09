@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.jdkgroup.interviewdemo.R;
 import com.jdkgroup.interviewdemo.service.BroadcastServiceDateTime;
 
-public class ActivityServiceDateTime extends AppCompatActivity {
+public class ServiceDateTimeActivity extends AppCompatActivity {
     private static final String TAG = "BroadcastTest";
     private Intent intent;
 

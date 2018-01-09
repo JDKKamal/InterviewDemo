@@ -23,10 +23,6 @@ public class Validator {
     public final static String patternName = "[a-zA-Z]{3,10}$";
     public final static String patternMobile = "^[0-9]{10,10}$";
 
-    public static String getText(String str) {
-        return str.trim();
-    }
-
     public static boolean isEmpty(String str) {
         return StringUtils.isEmpty(str) || StringUtils.isBlank(str) || Strings.isNullOrEmpty(str);
     }
@@ -40,9 +36,9 @@ public class Validator {
         return StringUtils.equals(strA, strB);
     }
 
-    public static String range(String str)
+    public static String range(String str, char start, char end)
     {
-        return CharMatcher.inRange('0', '9').retainFrom(str);
+        return CharMatcher.inRange(start, end).retainFrom(str);
     }
 
     public static boolean isLinkAvailable(String link) {
@@ -54,4 +50,7 @@ public class Validator {
         return false;
     }
 
+    public static String removeAllWhiteSpace(String value) {
+        return value.replaceAll("\\s+", "");
+    }
 }

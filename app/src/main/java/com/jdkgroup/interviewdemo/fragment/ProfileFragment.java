@@ -35,8 +35,6 @@ public class ProfileFragment extends BaseFragment {
         setHasOptionsMenu(true);
         EventBus.getDefault().post("Profile");
 
-        System.out.println("Tag" + "onCreateView");
-
         return view;
     }
 
@@ -44,8 +42,6 @@ public class ProfileFragment extends BaseFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         unbinder = ButterKnife.bind(this, view);
-
-        System.out.println("Tag" + "onViewCreated");
     }
 
     @Override

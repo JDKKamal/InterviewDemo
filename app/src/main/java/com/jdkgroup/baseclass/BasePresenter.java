@@ -2,7 +2,7 @@ package com.jdkgroup.baseclass;
 
 import com.jdkgroup.interacter.AppInteractor;
 
-public abstract class BasePresenter<V extends BaseView> {
+public class BasePresenter<V extends BaseView> {
     private V view;
     protected AppInteractor appInteractor;
 

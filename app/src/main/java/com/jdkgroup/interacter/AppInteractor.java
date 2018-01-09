@@ -31,15 +31,8 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
 public class AppInteractor implements RestConstant{
-    public AppInteractor() {
-    }
 
-    private void getRequestParam(HashMap<String, String> hashMap) {
-        Iterator it = hashMap.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry pair = (Map.Entry) it.next();
-            AppUtils.loge(pair.getKey() + " - " + pair.getValue());
-        }
+    public AppInteractor() {
     }
 
     //TODO DEFAULT

@@ -67,7 +67,6 @@ import com.jdkgroup.interviewdemo.fragment.ProfileFragment;
 
 public class AppUtils {
     private static String TAG = "Tag";
-    private static int screenWidth = 0;
 
     private static JSONObject jsonobject;
     private static Iterator iterator;
@@ -159,17 +158,6 @@ public class AppUtils {
     /* public static RequestBody getRequestBody(String value) {
         return RequestBody.create(MediaType.parse("multipart/form-data"), value);
     } */
-
-    public static int getScreenWidth(Context c) {
-        if (screenWidth == 0) {
-            WindowManager wm = (WindowManager) c.getSystemService(Context.WINDOW_SERVICE);
-            Display display = wm.getDefaultDisplay();
-            Point size = new Point();
-            display.getSize(size);
-            screenWidth = size.x;
-        }
-        return screenWidth;
-    }
 
     public static void startActivity(Context context, Class className) {
         Intent intent = new Intent(context, className);
@@ -270,7 +258,7 @@ public class AppUtils {
         return mDate.getTime();
     }
 
-    public static String getFormatedNumber(String val) {
+    public static String getFormatNumber(String val) {
         double d = 0;
         try {
             d = Double.parseDouble(val);
@@ -287,17 +275,10 @@ public class AppUtils {
             iterator = map.entrySet().iterator();
             while (iterator.hasNext()) {
                 Map.Entry pair = (Map.Entry) iterator.next();
-
                 jsonobject.put(String.valueOf(pair.getKey()), String.valueOf(pair.getValue()));
             }
-        } catch (Exception ex) {
-        }
-
+        } catch (Exception ex) { }
         return jsonobject;
-    }
-
-    public static String removeAllWhiteSpace(String value) {
-        return value.replaceAll("\\s+", "");
     }
 
     public static String getPathFromMediaUri(@NonNull Context context, @NonNull Uri uri) {
@@ -509,12 +490,6 @@ public class AppUtils {
         return last;
     }
 
-    public static void listIterator(List<String> list) {
-        for (Iterator<String> iterator = list.iterator(); iterator.hasNext(); ) {
-            String str = iterator.next();
-        }
-    }
-
     public static boolean hasLollipop() {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP;
     }
@@ -554,4 +529,13 @@ public class AppUtils {
             context.startActivity(uninstallIntent);
         }
     }
+
+    public static void requestParam(HashMap<String, String> hashMap) {
+        Iterator it = hashMap.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            AppUtils.loge(pair.getKey() + " - " + pair.getValue());
+        }
+    }
+
 }

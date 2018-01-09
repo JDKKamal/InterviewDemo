@@ -60,7 +60,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-public class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment {
 
     private Dialog progressDialog;
     private Intent intent;
