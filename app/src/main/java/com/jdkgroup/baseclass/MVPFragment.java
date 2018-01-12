@@ -42,6 +42,6 @@ public abstract class MVPFragment<P extends BasePresenter<V>, V extends BaseView
     }
 
     public boolean hasInternet() {
-        return hasInternet();
+        return isInternet();
     }
 }

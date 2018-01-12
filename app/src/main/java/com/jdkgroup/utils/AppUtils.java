@@ -277,7 +277,8 @@ public class AppUtils {
                 Map.Entry pair = (Map.Entry) iterator.next();
                 jsonobject.put(String.valueOf(pair.getKey()), String.valueOf(pair.getValue()));
             }
-        } catch (Exception ex) { }
+        } catch (Exception ex) {
+        }
         return jsonobject;
     }
 
@@ -538,4 +539,8 @@ public class AppUtils {
         }
     }
 
+    public static double getTotalOfSum(List<Double> list)
+    {
+        return list.stream().mapToDouble(i -> i.doubleValue()).sum();
+    }
 }

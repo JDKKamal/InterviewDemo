@@ -234,10 +234,6 @@ public abstract class BaseFragment extends Fragment {
         return map;
     }
 
-    protected boolean hasInternetWithoutMessage() {
-        return hasInternet();
-    }
-
     protected void showNoInternet() {
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getLayoutInflater();
@@ -354,7 +350,7 @@ public abstract class BaseFragment extends Fragment {
 
 
     protected void intentOpenBrowser(final String url) {
-        if (hasInternet()) {
+        if (isInternet()) {
             intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse(url));
             startActivity(intent);
@@ -381,8 +377,8 @@ public abstract class BaseFragment extends Fragment {
         return filter;
     }
 
-    protected boolean hasInternet() {
-        ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+    protected boolean isInternet() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
         @SuppressLint("MissingPermission") NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         if (!(networkInfo != null && networkInfo.isConnectedOrConnecting())) {
             AppUtils.showToast(getActivity(), getActivity().getString(R.string.no_internet_message));

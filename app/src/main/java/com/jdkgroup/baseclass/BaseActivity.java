@@ -278,10 +278,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
-    public boolean hasInternetWithoutMessage() {
-        return hasInternet();
-    }
-
     protected void showNoInternet() {
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getApplicationContext());
         LayoutInflater inflater = getLayoutInflater();
@@ -447,7 +443,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     /* TODO LAUNCH ACTIVITY/FRAGMENT ANIMATION*/
     protected void intentOpenBrowser(final String url) {
-        if (hasInternet()) {
+        if (isInternet()) {
             intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse(url));
             startActivity(intent);
@@ -456,7 +452,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
-    protected boolean hasInternet() {
+    protected boolean isInternet() {
         ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
         @SuppressLint("MissingPermission") NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         if (!(networkInfo != null && networkInfo.isConnectedOrConnecting())) {
